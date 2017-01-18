@@ -14,18 +14,7 @@ Module.register("pimatic",{
 		url: undefined,
 		username: undefined,
 		password: undefined,
-		mappings: [
-			/*function(notification, payload, sender) {
-				if (notification == "USER_PRESENCE" && payload == true) {
-					return {'device': 'magicmirror-presence', 'action': 'changePresenceTo', 'params': {'presence': 'true'}};
-				}
-			}*/
-			function(notification, payload, sender) {
-				if (notification == "USER_PRESENCE") {
-					return {"uri": "device/magicmirror-presence/changePresenceTo", "params": {"presence": (payload === true) }};
-				}
-			}
-		]
+		mappings: []
 	},
 
 	pimaticCall: function(uri, params) {
