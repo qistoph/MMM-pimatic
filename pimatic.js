@@ -11,9 +11,9 @@ Module.register("pimatic",{
 
 	// Default module config.
 	defaults: {
-		pimaticUrl: undefined,
-		pimaticUser: undefined,
-		pimaticPass: undefined,
+		url: undefined,
+		username: undefined,
+		password: undefined,
 		mappings: [
 			/*function(notification, payload, sender) {
 				if (notification == "USER_PRESENCE" && payload == true) {
@@ -35,9 +35,9 @@ Module.register("pimatic",{
 		}
 
 		this.sendSocketNotification("PIMATIC_API_CALL", {
-			"url": this.config.pimaticUrl + "" + uri,
-			"username": this.config.pimaticUser,
-			"password": this.config.pimaticPass,
+			"url": this.config.url + "" + uri,
+			"username": this.config.username,
+			"password": this.config.password,
 			"params": params
 		});
 	},
