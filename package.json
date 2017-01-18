@@ -1,0 +1,37 @@
+{
+  "name": "mmm-pimatic",
+  "version": "0.0.1",
+  "description": "MagicMirror² module to send notifications to Pimatic",
+  "main": "pimatic.js",
+  "scripts": {
+    "test": "grunt",
+    "precommit": "grunt precommit"
+  },
+  "pre-commit": [
+    "precommit"
+  ],
+  "author": "Chris van Marle",
+  "license": "MIT",
+  "dependencies": {
+    "simple-git": "^1.64.0"
+  },
+  "bugs": {
+    "url": "https://github.com/qistoph/MMM-pimatic/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qistoph/MMM-pimatic"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-eslint": "^19.0.0",
+    "grunt-jsonlint": "^1.1.0",
+    "grunt-markdownlint": "^1.0.16",
+    "grunt-staged": "^0.1.0",
+    "grunt-stylelint": "^0.6.0",
+    "pre-commit": "^1.2.1",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0",
+    "time-grunt": "^1.4.0"
+  }
+}
