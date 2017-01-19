@@ -7,8 +7,10 @@ send events to a [Pimatic](https://pimatic.org) installation.
 
 ## Installing the module
 
-To install the module, just clone this repository to your __modules__ folder:
-`git clone https://github.com/qistoph/MMM-pimatic.git pimatic`.
+To install the module, just clone this repository in your __modules__ folder:
+
+`git clone https://github.com/qistoph/MMM-pimatic.git pimatic`
+
 The run `cd pimatic` and `npm install` to install the dependencies.
 
 ## Updating the module
@@ -39,10 +41,10 @@ The following properties can be configured:
 
 Option           | Description
 ---------------- | -----------
-`url`            | The URL to get the status from. Must be a php-nagios-json page.<br>**Required**
+`url`            | The URL to your pimatic API. Should include the port and the `/api/` suffix.<br>**Example:** `https://your.host:8443/api/`<br>**Required**
 `username`       | The username to use for API calls.<br>**Required**
 `password`       | The password to use for API calls.<br>**Required**
-`mappings`       | An array of mappings used to convert notifications to Pimatic calls. See (Mappings)[#mappings] for details.<br>**Required**</br>
+`mappings`       | An array of mappings used to convert notifications to Pimatic calls. See [Mappings](#mappings) for details.<br>**Required**</br>
 
 ### Mappings
 
@@ -60,7 +62,8 @@ If your pimatic installation has a `DummuPresenceSensor` with the id
 `magicmirror-presence` you could use the following samples to change its
 presence when `USER_PRESENCE` notifactions are received.
 
-**Send present only**
+### Send present only
+
 ````javascript
 mappings: [
   function(notification, payload, sender) {
@@ -71,7 +74,8 @@ mappings: [
 ]
 ````
 
-**Send present and absent events**
+### Send present and absent events
+
 ````javascript
 mappings: [
   function(notification, payload, sender) {
@@ -80,5 +84,4 @@ mappings: [
     }
   }
 ]
-
 ````
